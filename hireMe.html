@@ -19,87 +19,90 @@
   </head>
   <body>
     <!-- Nav Bar -->
-    <header class="position-absolute z-1 NavHire">
-      <nav>
-        <div class="logo mx-2">
-          <a href="/index.html"
-            ><img src="/Image/logo.svg" alt="Logo" class="img-fluid"
-          /></a>
-        </div>
-
-        <div class="MenuContainer">
-          <ul>
-            <li><a href="/Project.html">Project</a></li>
-
-            <li><a href="/About.html">About</a></li>
-            <li><a href="/hireMe.html">Hire me</a></li>
-          </ul>
-        </div>
-
-        <div class="burgerMenu mx-2" onclick="ShowMenu()">
-          <svg
-            width="30"
-            height="20"
-            viewBox="0 0 18 14"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M17 1L1 1"
-              stroke="black"
-              stroke-width="1.5"
-              stroke-linecap="round"
-            />
-            <path
-              d="M17 7L1 7"
-              stroke="black"
-              stroke-width="1.5"
-              stroke-linecap="round"
-            />
-            <path
-              d="M17 13L1 13"
-              stroke="black"
-              stroke-width="1.5"
-              stroke-linecap="round"
-            />
-          </svg>
-        </div>
-
-        <div class="Mobilescreen" id="closeelement">
-          <div class="MenuWraper">
-            <ul>
-              <li><a href="/Project.html">Project</a></li>
-              <li><a href="/About.html">About</a></li>
-              <li><a href="/hireMe.html">Hire me</a></li>
-            </ul>
-          </div>
-
-          <div class="close position-absolute" onclick="closeElement() ">
-            <svg
-              id="close"
-              width="24"
-              height="24"
-              viewBox="0 0 46 46"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M3 3L43 43"
-                stroke="white"
-                stroke-width="6"
-                stroke-linecap="round"
-              />
-              <path
-                d="M3 43L43 3"
-                stroke="white"
-                stroke-width="6"
-                stroke-linecap="round"
-              />
-            </svg>
-          </div>
-        </div>
-      </nav>
-    </header>
+     <div class="position-absolute z-1 hireNav">
+       <header>
+         <nav>
+           <div class="logo mx-2">
+             <a href="/index.html"
+               ><img src="/Image/logo.svg" alt="Logo" class="img-fluid"
+             /></a>
+           </div>
+   
+           <div class="MenuContainer">
+             <ul>
+               <li><a href="/Project.html">Project</a></li>
+   
+               <li><a href="/About.html">About</a></li>
+               <li><a href="/hireMe.html" class="active">Hire me</a></li>
+             </ul>
+           </div>
+   
+           <div class="burgerMenu mx-2" onclick="ShowMenu()">
+             <svg
+               width="30"
+               height="20"
+               viewBox="0 0 18 14"
+               fill="none"
+               xmlns="http://www.w3.org/2000/svg"
+             >
+               <path
+                 d="M17 1L1 1"
+                 stroke="black"
+                 stroke-width="1.5"
+                 stroke-linecap="round"
+               />
+               <path
+                 d="M17 7L1 7"
+                 stroke="black"
+                 stroke-width="1.5"
+                 stroke-linecap="round"
+               />
+               <path
+                 d="M17 13L1 13"
+                 stroke="black"
+                 stroke-width="1.5"
+                 stroke-linecap="round"
+               />
+             </svg>
+           </div>
+   
+           <div class="Mobilescreen" id="closeelement">
+             <div class="MenuWraper">
+               <ul>
+                 <li><a href="/Project.html">Project</a></li>
+                 <li><a href="/About.html">About</a></li>
+                 <li><a href="/hireMe.html">Hire me</a></li>
+               </ul>
+             </div>
+   
+             <div class="close position-absolute" onclick="closeElement() ">
+               <svg
+                 id="close"
+                 width="24"
+                 height="24"
+                 viewBox="0 0 46 46"
+                 fill="none"
+                 xmlns="http://www.w3.org/2000/svg"
+               >
+                 <path
+                   d="M3 3L43 43"
+                   stroke="white"
+                   stroke-width="6"
+                   stroke-linecap="round"
+                 />
+                 <path
+                   d="M3 43L43 3"
+                   stroke="white"
+                   stroke-width="6"
+                   stroke-linecap="round"
+                 />
+               </svg>
+             </div>
+           </div>
+         </nav>
+       </header>
+       
+     </div>
     <!-- nav Bar End -->
 
     <div class="gridContainer">
@@ -126,7 +129,7 @@
             <label for="name" id="labelName">Name</label>
             <input type="text" value="" id="name" onblur="nameValidation()" class="Suscce" />
 
-            <label for="mail">Mail Id</label>
+            <label for="mail" id="maillabel">Mail Id</label>
             <input
               type="text"
               value=""
@@ -157,8 +160,9 @@
       </section>
     </div>
 
-    
+    <script src="https://unpkg.com/lenis@1.1.11/dist/lenis.min.js"></script> 
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
     <script src="/script.js"></script>
   </body>
 </html>

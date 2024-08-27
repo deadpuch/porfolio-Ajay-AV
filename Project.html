@@ -115,71 +115,83 @@
         <p>scroll</p>
       </div>
     </section>
-
+    
+    
     <section class="workSection mx-2">
       <div class="BtnContainer">
         <div class="uibtn">UI UX DESIGN</div>
         <a href="#graphicdesign"><div class="grabtn">GRAPHICS DESIGN</div></a>
         <a href="#webdevlopment"><div class="devbtn">WEBDEVELPOEMNT</div></a>
       </div>
+      
+      <div id="filter-controls" class="my-4">
+        <button onclick="sortSections('date')">Sort by Date</button>
+        <button onclick="sortSections('alphabetical')">Sort by A-Z</button>
+      </div>
+      <!-- work show case -->
 
-      <div class="workContainer">
-        <!-- work show case -->
-
-        <div id="uiuxSection" class="workholder">
+      <div class="workContainer" id="workContainer">
+        
+        <div id="uiuxSection" class="workholder" data-date="10-06-2024">
           <div class="textContainer">
-            <h2>SRM PHARMA</h2>
-            <p>UI UX DESIGN | Web development</p>
+            <h2 class="fw-bold font-Roboto+Mono">SRM PHARMA</h2>
+            <p class="m-0 ">UI UX DESIGN | WEB DEVELOPMENT</p>
+            <p class="date">10-06-2024</p>
           </div>
-
+          
           <div class="Imgcontainer">
             <img src="./Image/srm.jpg" alt="" />
           </div>
         </div>
-
-        <div class="workholder">
+        
+        <div class="workholder" data-date="02-03-2023">
           <div class="textContainer">
-            <h2>SRM PHARMA</h2>
-            <p>safdsfsdaff</p>
+            <h2 class="fw-bold font-Roboto+Mono">INFUUSE</h2>
+            <p class="m-0 ">UI UX DESIGN</p>
+            <p class="date">02-01-2024</p>
           </div>
-
+          
           <div class="Imgcontainer">
-            <img src="./Image/srm.jpg" alt="" />
+            <img src="/Image/infuuse.jpg" alt="" />
           </div>
         </div>
-
-        <div class="graphicdesign" id="graphicdesign">
-          <div id="uiuxSection" class="workholder">
-            <div class="textContainer">
-              <h2>SRM PHARMA</h2>
-              <p>UI UX DESIGN | Web development</p>
-            </div>
-
-            <div class="Imgcontainer">
-              <img src="/Image/srm.jpg" alt="" />
-            </div>
+        
+        <!-- graphic design -->
+        
+        <div id="Grapicdesign" class="workholder" data-date="2021-04-14">
+          <div class="textContainer">
+            <h2 class="fw-bold font-Roboto+Mono">INFUUSE</h2>
+            <p class="m-0 "> BRANDING | PACKAGE DESIGN</p>
+            <p class="date">02-07-2023</p>
+          </div>
+          
+          <div class="Imgcontainer">
+            <img src="/Image/rock-cylinder-podium-stone-pedestal-product-display-presentation-3d-background.jpg" alt="" />
           </div>
         </div>
+        
+        
+         <!-- web development -->
 
-        <div class="graphicdesign" id="webdevlopment">
-          <div id="uiuxSection" class="workholder">
-            <div class="textContainer">
-              <h2>SRM PHARMA</h2>
-              <p>UI UX DESIGN | Web development</p>
-            </div>
-
-            <div class="Imgcontainer">
-              <img src="/Image/srm.jpg" alt="" />
-            </div>
+        <div id="WebDevelopment" class="workholder" data-date="2022-04-14">
+          <div class="textContainer">
+            <h2 class="fw-bold font-Roboto+Mono">TODO LIST</h2>
+            <p>WEB DEVELOPMENT</p>
+          </div>
+          
+          <div class="Imgcontainer">
+            <img src="/Image/Untitled-1.jpg" alt="" />
           </div>
         </div>
+        
       </div>
     </section>
-
+    
     <script src="https://unpkg.com/lenis@1.1.11/dist/lenis.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
     <script src="/bootstrap-5.3.3/dist/js/bootstrap.js"></script>
     <script src="/script.js"></script>
   </body>
-</html>
+  </html>
+  

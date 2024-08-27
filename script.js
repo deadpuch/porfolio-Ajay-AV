@@ -54,61 +54,62 @@ gsap.ticker.lagSmoothing(0);
 
 // gsap lenis end
 
-
- // use a script tag or an external JS file
- document.addEventListener("DOMContentLoaded", (event) => {
-  gsap.registerPlugin(ScrollTrigger)
+// use a script tag or an external JS file
+document.addEventListener("DOMContentLoaded", (event) => {
+  gsap.registerPlugin(ScrollTrigger);
   // gsap code here!
- });
-
-
-
-
-
-const mainContainer = document.querySelectorAll(".workholder");
-
-mainContainer.forEach((mainbody) => {
-  let text = mainbody.querySelector(".textContainer");
-  let image = mainbody.querySelector(".Imgcontainer");
-
-  let tl = gsap.timeline({
-    scrollTrigger: {
-      trigger: mainbody,
-      start: "top bottom",
-      end: "bottom 90%",
-      scrub: true,
-    },
-  });
-
-  tl.fromTo(text, { xPercent: -100, opacity: 0 }, { xPercent: 0, opacity: 1 });
-  tl.fromTo(
-    image,
-    { xPercent: 100, opacity: 0 },
-    { xPercent: 0, opacity: 1 },
-    "<"
-  );
 });
+
+// const mainContainer = document.querySelectorAll(".workholder");
+
+// mainContainer.forEach((mainbody) => {
+//   let text = mainbody.querySelector(".textContainer");
+//   let image = mainbody.querySelector(".Imgcontainer");
+
+//   let tl = gsap.timeline({
+//     scrollTrigger: {
+//       trigger: mainbody,
+//       start: "top bottom",
+//       end: "bottom 90%",
+//       scrub: true,
+//     },
+//   });
+
+//   tl.fromTo(text, { xPercent: -100, opacity: 0 }, { xPercent: 0, opacity: 1 });
+//   tl.fromTo(
+//     image,
+//     { xPercent: 100, opacity: 0 },
+//     { xPercent: 0, opacity: 1 },
+//     "<"
+//   );
+// });
 
 // validation
 
 function nameValidation() {
   const nameValue = document.getElementById("name").value;
   const regex = /^[a-zA-Z ]+$/;
- 
 
   const check = regex.test(nameValue);
 
   if (check) {
     const succes = document.getElementById("name");
-    succes.style.cssText =[  "border: none;border-bottom: 1px solid rgb(26, 155, 0); padding: 0; background: none; margin-top: 1em; width: 100%; margin-bottom: 1em; color:"]
-    return true
-
+    const lable = document.getElementById("labelName");
+    succes.style.cssText = [
+      "border: none;border-bottom: 1px solid rgb(26, 155, 0); padding: 0; background: none; margin-top: 1em; width: 100%; margin-bottom: 1em; color:",
+    ];
+    lable.style.color = "green";
+    return true;
   } else {
     const succes = document.getElementById("name");
-    succes.style.cssText =[  "border: none;border-bottom: 1px solid rgb(126, 0, 0); padding: 0; background: none; margin-top: 1em; width: 100%; margin-bottom: 1em;"]
-    succes.placeholder = 'Please enter a valid name';
+    const lable = document.getElementById("labelName");
+    succes.style.cssText = [
+      "border: none;border-bottom: 1px solid rgb(126, 0, 0); padding: 0; background: none; margin-top: 1em; width: 100%; margin-bottom: 1em;",
+    ];
+    succes.placeholder = "Please enter a valid name";
+    lable.style.color = "red";
 
-    return false
+    return false;
   }
 }
 
@@ -120,31 +121,121 @@ function MailValidation() {
 
   if (check) {
     const succes = document.getElementById("mail");
-    succes.style.cssText =[  "border: none;border-bottom: 1px solid rgb(26, 155, 0); padding: 0; background: none; margin-top: 1em; width: 100%; margin-bottom: 1em; color:"]
-    return true
+    const maillable = document.getElementById("maillabel");
+    succes.style.cssText = [
+      "border: none;border-bottom: 1px solid rgb(26, 155, 0); padding: 0; background: none; margin-top: 1em; width: 100%; margin-bottom: 1em; color:",
+    ];
+    maillable.style.color = "green";
+    return true;
   } else {
     const succes = document.getElementById("mail");
-    succes.style.cssText =[  "border: none;border-bottom: 1px solid rgb(126, 0, 0); padding: 0; background: none; margin-top: 1em; width: 100%; margin-bottom: 1em;"]
-    succes.placeholder = 'Please enter a valid Mail ID';
-    return false
+    const maillable = document.getElementById("maillabel");
+    succes.style.cssText = [
+      "border: none;border-bottom: 1px solid rgb(126, 0, 0); padding: 0; background: none; margin-top: 1em; width: 100%; margin-bottom: 1em;",
+    ];
+    succes.placeholder = "Please enter a valid Mail ID";
+    maillable.style.color = "red";
+    return false;
   }
-  
 }
 
-function submitValidation(){
-  const checkname=nameValidation()
-  const checkmail=MailValidation()
+function submitValidation() {
+  const checkname = nameValidation();
+  const checkmail = MailValidation();
 
-  console.log(checkmail);
-  
-  console.log(checkname);
-  
-
-  if(checkname && checkmail){
-    return true
+  if (checkname && checkmail) {
+    return true;
   }
 
-  return false
+  return false;
+}
+
+// filter
+
+function sortSections(criteria) {
+  const sections = Array.from(document.querySelectorAll(".workholder"));
+
+  sections.sort((a, b) => {
+    if (criteria === "date") {
+      const dateA = new Date(a.getAttribute("data-date"));
+      const dateB = new Date(b.getAttribute("data-date"));
+      return dateA - dateB; 
+    } else if (criteria === "alphabetical") {
+      const titleA = a.querySelector("h2").textContent.toLowerCase();
+      const titleB = b.querySelector("h2").textContent.toLowerCase();
+      return titleA.localeCompare(titleB); 
+    }
+  });
+
+  const container = document.querySelector(".workContainer");
+  sections.forEach((section) => container.appendChild(section));
+  ScrollTrigger.refresh();
+  ScrollTrigger.update();
 }
 
 
+// gsap animation
+
+document.addEventListener("DOMContentLoaded", () => {
+  gsap.registerPlugin(ScrollTrigger);
+
+  const initializeGSAP = () => {
+    const sections = document.querySelectorAll(".workholder");
+
+    sections.forEach((mainbody) => {
+      let text = mainbody.querySelector(".textContainer");
+      let image = mainbody.querySelector(".Imgcontainer");
+
+      let tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: mainbody,
+          start: "top bottom",
+          end: "bottom 90%",
+          scrub: true,
+          onEnter: () => ScrollTrigger.refresh(),
+          onLeaveBack: () => ScrollTrigger.refresh(),
+          
+        },
+      });
+
+      tl.fromTo(text, { xPercent: -100, opacity: 0 }, { xPercent: 0, opacity: 1 });
+      tl.fromTo(
+        image,
+        { xPercent: 100, opacity: 0 },
+        { xPercent: 0, opacity: 1 },
+        "<"
+      );
+    });
+
+    ScrollTrigger.refresh();
+  };
+
+  initializeGSAP();
+
+  window.addEventListener("hashchange", () => {
+    ScrollTrigger.refresh();
+  });
+
+  lenis.on("scroll", () => {
+    ScrollTrigger.update();
+  });
+
+  window.addEventListener("resize", () => {
+    ScrollTrigger.refresh();
+  });
+});
+
+
+window.addEventListener("scroll", () => {
+  const scrolledToBottom = window.innerHeight + window.pageYOffset >= document.body.offsetHeight;
+  if (scrolledToBottom) {
+    ScrollTrigger.refresh();
+  }
+});
+
+
+window.addEventListener("scroll", () => {
+  if (window.pageYOffset === 0) {
+    ScrollTrigger.refresh();
+  }
+});

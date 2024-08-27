@@ -1,17 +1,17 @@
-/* .Suscce{
-    border: none;
-    border-bottom: 1px solid rgb(126, 0, 0);
+*{
+    margin: 0;
     padding: 0;
-    background: none;
-    margin-top: 1em;
-    width: 100%;
-    margin-bottom: 1em;
-} */
-
-.NavHire{
-    width: 96.5vw
 }
 
+.hireNav{
+    width: 100%;
+}
+
+/* header{
+    position:fixed;
+    width: 100%;
+z-index: 1000;
+} */
 
 input{
     border: none;

@@ -1,6 +1,7 @@
 section{
+  height: 85vh;
   display: flex;
-
+align-items: center;
 }
 
 .BentoBox {
@@ -17,11 +18,7 @@ section{
  justify-content: center;
 }
 
-/* .BentoOne, .BentoTwo, .BentoThree, .Bentofour {
-    position: relative;
-    overflow: hidden; 
-    border-radius: 30px;
-  } */
+
 
 .BentoOne {
   grid-area: 1/3/3/5;
@@ -74,7 +71,9 @@ section{
   
 
 @media (max-width: 768px){
-
+section{
+  height:100%;
+}
 
     .BentoBox {
         display: flex;
