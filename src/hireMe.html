@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="../Image/logo.svg" type="image/x-icon" />
+    <title>Ajay AV</title>
+    <link
+      rel="stylesheet"
+      href="../node_modules/bootstrap/dist/css/bootstrap.css"
+    />
+    <link rel="stylesheet" href="../src/assets/css/main.css" />
+    <link rel="stylesheet" href="../src/assets/css/about.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/lenis@1.1.11/dist/lenis.css"
+    />
+    <link rel="stylesheet" href="../src/assets/css/hireme.css" />
+  </head>
+  <body>
+    <!-- Nav Bar -->
+    <header class="position-absolute z-1 NavHire">
+      <nav>
+        <div class="logo mx-2">
+          <a href="./index.html"
+            ><img src="../Image/logo.svg" alt="Logo" class="img-fluid"
+          /></a>
+        </div>
+
+        <div class="MenuContainer">
+          <ul>
+            <li><a href="./Project.html">Project</a></li>
+
+            <li><a href="./About.html">About</a></li>
+            <li><a href="./hireMe.html">Hire me</a></li>
+          </ul>
+        </div>
+
+        <div class="burgerMenu mx-2" onclick="ShowMenu()">
+          <svg
+            width="30"
+            height="20"
+            viewBox="0 0 18 14"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M17 1L1 1"
+              stroke="black"
+              stroke-width="1.5"
+              stroke-linecap="round"
+            />
+            <path
+              d="M17 7L1 7"
+              stroke="black"
+              stroke-width="1.5"
+              stroke-linecap="round"
+            />
+            <path
+              d="M17 13L1 13"
+              stroke="black"
+              stroke-width="1.5"
+              stroke-linecap="round"
+            />
+          </svg>
+        </div>
+
+        <div class="Mobilescreen" id="closeelement">
+          <div class="MenuWraper">
+            <ul>
+              <li><a href="./Project.html">Project</a></li>
+              <li><a href="./About.html">About</a></li>
+              <li><a href="./hireMe.html">Hire me</a></li>
+            </ul>
+          </div>
+
+          <div class="close position-absolute" onclick="closeElement() ">
+            <svg
+              id="close"
+              width="24"
+              height="24"
+              viewBox="0 0 46 46"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M3 3L43 43"
+                stroke="white"
+                stroke-width="6"
+                stroke-linecap="round"
+              />
+              <path
+                d="M3 43L43 3"
+                stroke="white"
+                stroke-width="6"
+                stroke-linecap="round"
+              />
+            </svg>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- nav Bar End -->
+
+    <div class="gridContainer">
+      <section class="position-relative">
+        <div class="imageContainer">
+          <img
+            src="../Image/representation-collective-mind-process-concept-digital-art-style.jpg"
+            alt=""
+            class="image"
+          />
+        </div>
+      </section>
+
+      <section class="formConatiner">
+        <div class="formWraper">
+          <div class="contactDetails">
+            <h3 class="mb-4">Contact Me</h3>
+            <h5>Mail ID</h5>
+            <h6>ajay1999@gmail.com</h6>
+            <span></span>
+          </div>
+
+          <form action="" onsubmit="return submitValidation()" class="mt-5">
+            <label for="name" id="labelName">Name</label>
+            <input type="text" value="" id="name" onblur="nameValidation()" class="Suscce" />
+
+            <label for="mail">Mail Id</label>
+            <input
+              type="text"
+              value=""
+              name=""
+              id="mail"
+              onblur="MailValidation()"
+            />
+
+            <label for="message">Message</label>
+            <input type="text" name="" id="message" />
+            <div>
+              <input type="submit" id="submit" />
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M7.99983 20.7501C8.19889 20.751 8.38994 20.6717 8.52983 20.5301L16.5298 12.5301C16.8223 12.2373 16.8223 11.7629 16.5298 11.4701L8.52983 3.47009C8.23432 3.19473 7.77382 3.20286 7.48821 3.48847C7.20259 3.77408 7.19447 4.23458 7.46983 4.53009L14.9398 12.0001L7.46983 19.4701C7.17737 19.7629 7.17737 20.2373 7.46983 20.5301C7.60971 20.6717 7.80076 20.751 7.99983 20.7501Z"
+                  fill="black"
+                />
+              </svg>
+            </div>
+          </form>
+        </div>
+      </section>
+    </div>
+
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="../node_modules/gsap/dist/gsap.min.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>

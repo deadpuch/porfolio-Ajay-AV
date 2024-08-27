@@ -1,0 +1,97 @@
+section{
+  display: flex;
+
+}
+
+.BentoBox {
+  margin-top: 2rem;
+  max-height: 80vh;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 0.5rem;
+  box-sizing: border-box;
+  overflow: hidden;
+ padding-inline: 2rem;
+ justify-content: center;
+}
+
+/* .BentoOne, .BentoTwo, .BentoThree, .Bentofour {
+    position: relative;
+    overflow: hidden; 
+    border-radius: 30px;
+  } */
+
+.BentoOne {
+  grid-area: 1/3/3/5;
+  background-color: black;
+  border-radius: 30px;
+  background-image: url(../../../Image/Cat-in-Sapce.jpg);
+  display: flex;
+  background-size: cover;
+  
+}
+
+.BentoOne >h1{
+  font-family: Roboto+Mono;
+  font-size:clamp(20px,10vw,150px);
+  width: 100%;
+  padding: 1rem;
+}
+ 
+  
+.BentoTwo {
+  grid-area: 1/1/2/3;
+  background-color: rgb(252, 248, 231);
+  border-radius: 30px;
+  padding: 2rem;
+ 
+  
+}
+
+.BentoTwo>p{
+  font-family: poppins;
+ font-size: clamp(12px, 2vw, 16px );
+}
+
+.BentoThree {
+  grid-area: 2/1/2/2;
+  background-color: bisque;
+  border-radius: 30px;
+  background-image: url(../../../Image/pro.jpg);
+  background-size: cover;
+}
+.Bentofour {
+  grid-area: 2/2/2/3;
+  background-color: black;
+  border-radius: 30px;
+  background-image: url(../../../Image/01.jpg);
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+  
+
+@media (max-width: 768px){
+
+
+    .BentoBox {
+        display: flex;
+        flex-direction: column;
+        overflow-y: auto;
+     max-height:100%;
+        
+      }
+   .Bentofour{
+    width: 100%;
+    height: 50vh;
+    display: inline;
+   }
+
+   .BentoThree{
+    width: 100%;
+    height: 50vh;
+    display: inline;
+   }
+}
