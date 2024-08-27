@@ -24,7 +24,7 @@ align-items: center;
   grid-area: 1/3/3/5;
   background-color: black;
   border-radius: 30px;
-  background-image: url(../../../Image/Cat-in-Sapce.jpg);
+  background-image: url(/Image/Cat-in-Sapce.jpg);
   display: flex;
   background-size: cover;
   
@@ -56,14 +56,14 @@ align-items: center;
   grid-area: 2/1/2/2;
   background-color: bisque;
   border-radius: 30px;
-  background-image: url(../../../Image/pro.jpg);
+  background-image: url(/Image/pro.jpg);
   background-size: cover;
 }
 .Bentofour {
   grid-area: 2/2/2/3;
   background-color: black;
   border-radius: 30px;
-  background-image: url(../../../Image/01.jpg);
+  background-image: url(/Image/01.jpg);
   background-size: cover;
   width: 100%;
   height: 100%;
