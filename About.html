@@ -6,20 +6,19 @@
     <link rel="shortcut icon" href="../Image/logo.svg" type="image/x-icon" />
     <title>Ajay AV</title>
     <link
-    rel="stylesheet"
-    href="../bootstrap-5.3.3/dist/css/bootstrap.css"
-  />
-    <link rel="stylesheet" href="../src/css/main.css" />
-    <link rel="stylesheet" href="../src/css/hireme.css" />
+      rel="stylesheet"
+      href="./bootstrap-5.3.3/dist/css/bootstrap.css"
+    />
+    <link rel="stylesheet" href="./main.css" />
+    <link rel="stylesheet" href="./about.css" />
     <link
       rel="stylesheet"
       href="https://unpkg.com/lenis@1.1.11/dist/lenis.css"
     />
-    <link rel="stylesheet" href="../src/assets/css/hireme.css" />
   </head>
   <body>
     <!-- Nav Bar -->
-    <header class="position-absolute z-1 NavHire">
+    <header>
       <nav>
         <div class="logo mx-2">
           <a href="./index.html"
@@ -31,7 +30,7 @@
           <ul>
             <li><a href="./Project.html">Project</a></li>
 
-            <li><a href="./About.html">About</a></li>
+            <li><a href="./About.html"class="active">About</a></li>
             <li><a href="./hireMe.html">Hire me</a></li>
           </ul>
         </div>
@@ -101,64 +100,29 @@
       </nav>
     </header>
     <!-- nav Bar End -->
+    <section >
 
-    <div class="gridContainer">
-      <section class="position-relative">
-        <div class="imageContainer">
-          <img
-            src="../Image/representation-collective-mind-process-concept-digital-art-style.jpg"
-            alt=""
-            class="image"
-          />
+      <div class="BentoBox">
+
+        <div class="BentoOne">
+          <h1 class="text-light fw-bold font-Roboto+Mono d-flex ps-5 mt-5 ">CHASE <br> THE <br> WORLD</h1>
         </div>
-      </section>
-
-      <section class="formConatiner">
-        <div class="formWraper">
-          <div class="contactDetails">
-            <h3 class="mb-4">Contact Me</h3>
-            <h5>Mail ID</h5>
-            <h6>ajay1999@gmail.com</h6>
-            <span></span>
-          </div>
-
-          <form action="" onsubmit="return submitValidation()" class="mt-5">
-            <label for="name" id="labelName">Name</label>
-            <input type="text" value="" id="name" onblur="nameValidation()" class="Suscce" />
-
-            <label for="mail">Mail Id</label>
-            <input
-              type="text"
-              value=""
-              name=""
-              id="mail"
-              onblur="MailValidation()"
-            />
-
-            <label for="message">Message</label>
-            <input type="text" name="" id="message" />
-            <div>
-              <input type="submit" id="submit" />
-              <svg
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M7.99983 20.7501C8.19889 20.751 8.38994 20.6717 8.52983 20.5301L16.5298 12.5301C16.8223 12.2373 16.8223 11.7629 16.5298 11.4701L8.52983 3.47009C8.23432 3.19473 7.77382 3.20286 7.48821 3.48847C7.20259 3.77408 7.19447 4.23458 7.46983 4.53009L14.9398 12.0001L7.46983 19.4701C7.17737 19.7629 7.17737 20.2373 7.46983 20.5301C7.60971 20.6717 7.80076 20.751 7.99983 20.7501Z"
-                  fill="black"
-                />
-              </svg>
-            </div>
-          </form>
+        <div class="BentoTwo">
+          <h1 class="fw-bold font-Roboto+Mono">Where Creativity <br> Meets Functionality</h1>
+          <p class="font-poppins mt-3">Hello, I'm Ajay AV, a UI/UX and graphic designer with around 4 years of experience in the field. My journey includes working both as a freelancer and within 
+          companies, allowing me to develop a versatile skill set and a keen understanding of various design environments.</p>
         </div>
-      </section>
-    </div>
+  
+        <div class="BentoThree"></div>
+  
+        <div class="Bentofour"></div>
+      </div>
+    </section>
 
-    <script src="../node_modules/bootstrap/dist/js/bootstrap.js"></script>
-    <script src="../node_modules/gsap/dist/gsap.min.js"></script>
+    <script src="./bootstrap-5.3.3/dist/js/bootstrap.js"></script>
+    <script src="./node_modules/gsap/dist/gsap.min.js"></script>
+    <script src="./node_modules/gsap/dist/ScrollTrigger.js"></script>
+    <script src="https://unpkg.com/lenis@1.1.11/dist/lenis.min.js"></script>
     <script src="./script.js"></script>
   </body>
 </html>
