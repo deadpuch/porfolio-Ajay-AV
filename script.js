@@ -54,6 +54,17 @@ gsap.ticker.lagSmoothing(0);
 
 // gsap lenis end
 
+
+ // use a script tag or an external JS file
+ document.addEventListener("DOMContentLoaded", (event) => {
+  gsap.registerPlugin(ScrollTrigger)
+  // gsap code here!
+ });
+
+
+
+
+
 const mainContainer = document.querySelectorAll(".workholder");
 
 mainContainer.forEach((mainbody) => {
